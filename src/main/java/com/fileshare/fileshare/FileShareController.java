@@ -11,6 +11,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.logging.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 public class FileShareController {
@@ -18,7 +20,8 @@ public class FileShareController {
 	String directory;
 	FileShareController(){
 		directory="/media";
-		System.out.println("Directory is at "+directory);
+		Logger logger = (Logger) LoggerFactory.getLogger(FileShareController.class);
+		logger.info("Directory mounted at="+directory);
 	}
 
 	@GetMapping("/list")
