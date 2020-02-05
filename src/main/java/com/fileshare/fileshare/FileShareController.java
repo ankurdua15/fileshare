@@ -1,4 +1,5 @@
 package com.fileshare.fileshare;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +13,6 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Date;
 import java.util.logging.Logger;
-import org.slf4j.LoggerFactory;
 
 @Controller
 public class FileShareController {
