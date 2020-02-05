@@ -18,6 +18,7 @@ public class FileShareController {
 	String directory;
 	FileShareController(){
 		directory="/media";
+		System.out.println("Directory is at "+directory);
 	}
 
 	@GetMapping("/list")
