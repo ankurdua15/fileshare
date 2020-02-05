@@ -1,4 +1,5 @@
 package com.fileshare.fileshare;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Date;
-import java.util.logging.Logger;
 
 @Controller
 public class FileShareController {
@@ -20,7 +20,7 @@ public class FileShareController {
 	String directory;
 	FileShareController(){
 		directory="/media";
-		Logger logger = (Logger) LoggerFactory.getLogger(FileShareController.class);
+		Logger logger = LoggerFactory.getLogger(FileShareController.class);
 		logger.info("Directory mounted at="+directory);
 	}
 
