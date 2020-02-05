@@ -17,7 +17,7 @@ public class FileShareController {
 
 	String directory;
 	FileShareController(){
-		directory=System.getProperty("user.home");
+		directory="/media";
 	}
 
 	@GetMapping("/list")
